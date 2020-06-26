@@ -1,0 +1,1 @@
+export const TOGGLE_AUTH_MODEL = 'TOGGLE_AUTH_MODEL'

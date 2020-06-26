@@ -1,0 +1,2 @@
+export const DUMMY_CONST = 'DUMMY_CONST'
+export const DUMMY_CONST_SUCCESS = 'DUMMY_CONST_SUCCESS'
