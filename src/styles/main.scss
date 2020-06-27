@@ -1,1 +1,16 @@
 @import '~bootstrap/scss/bootstrap.scss';
+
+// footer
+
+.footer {
+	@extend .w-100;
+	@extend .bg-secondary;
+	@extend .p-3;
+	@extend .text-white;
+	display: flex;
+	justify-content: space-between;
+
+	small {
+		@extend .m-0;
+	}
+}
