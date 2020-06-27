@@ -1,27 +1,77 @@
+// Bootstrap customization
+
+$primary: #4A55C9;
+$footer_bg_color: #363f50;
+
+// Import bootstrap
+
 @import '~bootstrap/scss/bootstrap.scss';
 
-// footer
+// Footer
 
 .footer {
-  @extend .w-100;
-  @extend .bg-secondary;
-  @extend .p-3;
-  @extend .text-white;
-  display: flex;
-  justify-content: space-between;
+	@extend .w-100;
+	background-color: $footer_bg_color;
+	@extend .p-3;
+	@extend .text-white;
+	display: flex;
+	justify-content: space-between;
 
-  small {
-    @extend .m-0;
-  }
+	small {
+		@extend .m-0;
+	}
 
-  button {
-    @extend .btn;
-    @extend .text-white;
-    padding: 0 10px;
+	button {
+		@extend .btn;
+		@extend .text-white;
+		padding: 0 10px;
 
-    &:hover {
-      transform: scale(1.5);
-      transition: 0.5s;
-    }
-  }
+		&:hover {
+			transform: scale(1.4);
+			transition: 0.5s;
+		}
+	}
+}
+
+// TrendingIconList
+
+.trending_icon_list {
+	color: $gray-700;
+
+	.view_more {
+		@extend .mt-2;
+		font-size: 14px;
+	}
+
+	.single_item {
+		display: flex;
+		width: 100%;
+		@extend .py-2;
+		border-bottom: 1px solid $gray-500;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		img {
+			max-width: 80px;
+		}
+
+		.text_content_holder {
+			@extend .pt-3;
+			@extend .pl-2;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+
+			p {
+				@extend .mb-2;
+			}
+
+			small {
+				@extend .text-primary;
+			}
+		}
+	}
+
 }
