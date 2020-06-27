@@ -21,13 +21,14 @@ import {
   WISHLIST_PAGE_URL,
   ADDRESSES_PAGE_URL
 } from 'constants/appConfig'
+import { Footer, Header } from 'components'
 import { Route, Switch } from 'react-router-dom'
 import React from 'react'
-import { Footer } from 'components'
 
 const Routes = () => {
   return (
     <>
+      <Header />
       <Switch>
         <Route exact path={LANDING_PAGE_URL} component={LandingPage} />
         <Route

@@ -3,14 +3,25 @@
 // footer
 
 .footer {
-	@extend .w-100;
-	@extend .bg-secondary;
-	@extend .p-3;
-	@extend .text-white;
-	display: flex;
-	justify-content: space-between;
+  @extend .w-100;
+  @extend .bg-secondary;
+  @extend .p-3;
+  @extend .text-white;
+  display: flex;
+  justify-content: space-between;
 
-	small {
-		@extend .m-0;
-	}
+  small {
+    @extend .m-0;
+  }
+
+  button {
+    @extend .btn;
+    @extend .text-white;
+    padding: 0 10px;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+    }
+  }
 }
