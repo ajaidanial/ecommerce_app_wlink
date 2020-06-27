@@ -2,6 +2,7 @@
 
 $primary: #4A55C9;
 $footer_bg_color: #363f50;
+$light-blue: #ECF8FF;
 
 // Import bootstrap
 
@@ -74,4 +75,36 @@ $footer_bg_color: #363f50;
 		}
 	}
 
+}
+
+// LimitedOfferBanner
+
+.limited_offer_banner {
+	background: $light-blue;
+	@extend .p-4;
+	display: flex;
+	justify-content: space-between;
+	color: $gray-700;
+
+	.text_area {
+		@extend .pr-5;
+		display: flex;
+		align-items: center;
+
+		.banner_indicator {
+			@extend .badge,
+			.badge-danger,
+			.mb-3;
+		}
+
+		.view_button {
+			@extend .btn,
+			.btn-primary,
+			.px-3;
+		}
+	}
+
+	.image_content {
+		max-width: 50%;
+	}
 }
