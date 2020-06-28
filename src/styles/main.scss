@@ -5,8 +5,10 @@ $footer_bg_color: #363f50;
 $light-blue: #ecf8ff;
 $app_border_radius: 4px;
 
-// Import bootstrap
+// Import bootstrap & Other Stuff
 
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~slick-carousel/slick/slick.css';
 @import '~bootstrap/scss/bootstrap.scss';
 
 // Footer
@@ -112,7 +114,6 @@ $app_border_radius: 4px;
 // Single Product Item
 
 .single_product_item {
-	border: 1px solid red;
 	color: $gray-700;
 
 	.img_container {
@@ -182,6 +183,64 @@ $app_border_radius: 4px;
 
 		svg {
 			@extend .ml-2;
+		}
+	}
+}
+
+// Landing Top Banner
+
+.bannner_top_slider {
+	padding: 70px 0px;
+	background-color: $light-blue;
+
+	.slick-arrow.slick-next,
+	.slick-arrow.slick-prev {
+		display: none !important;
+	}
+
+	.slick-dots {
+		bottom: -45px;
+
+		.slick-active {
+			button {
+				&::before {
+					@extend .text-danger;
+				}
+			}
+		}
+
+		button {
+			&:hover {
+				&::before {
+					@extend .text-danger;
+				}
+			}
+		}
+
+		li {
+			@extend .mx-0;
+		}
+	}
+
+	.inner_slick_container {
+		display: flex !important;
+		flex-direction: row;
+
+		.info_container {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.inner_info {
+				color: $gray-700;
+
+				button {
+					svg {
+						@extend .ml-2;
+					}
+				}
+			}
 		}
 	}
 }
