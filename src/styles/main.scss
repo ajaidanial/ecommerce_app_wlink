@@ -3,6 +3,7 @@
 $primary: #4a55c9;
 $footer_bg_color: #363f50;
 $light-blue: #ecf8ff;
+$app_border_radius: 4px;
 
 // Import bootstrap
 
@@ -155,6 +156,32 @@ $light-blue: #ecf8ff;
 				color: $gray-700;
 				text-decoration: line-through;
 			}
+		}
+	}
+}
+
+// Section Heading
+
+.section_heading {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	@extend .pb-3;
+	@extend .mb-3;
+	border-bottom: 1px solid $gray-500;
+	color: $gray-700;
+
+	h3 {
+		@extend .mb-0;
+	}
+
+	button {
+		@extend .btn,
+		.btn-outline-primary;
+		border-radius: $app_border_radius;
+
+		svg {
+			@extend .ml-2;
 		}
 	}
 }
