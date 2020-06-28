@@ -1,8 +1,8 @@
 // Bootstrap customization
 
-$primary: #4A55C9;
+$primary: #4a55c9;
 $footer_bg_color: #363f50;
-$light-blue: #ECF8FF;
+$light-blue: #ecf8ff;
 
 // Import bootstrap
 
@@ -74,7 +74,6 @@ $light-blue: #ECF8FF;
 			}
 		}
 	}
-
 }
 
 // LimitedOfferBanner
@@ -106,5 +105,56 @@ $light-blue: #ECF8FF;
 
 	.image_content {
 		max-width: 50%;
+	}
+}
+
+// Single Product Item
+
+.single_product_item {
+	border: 1px solid red;
+	color: $gray-700;
+
+	.img_container {
+		position: relative;
+
+		.product_image {
+			max-width: 100%;
+		}
+
+		.product_badge {
+			@extend .badge;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+
+		.wishlist_btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			@extend .btn;
+			background-color: $gray-100;
+			border-radius: 100%;
+			width: 44px;
+			height: 44px;
+		}
+	}
+
+	.info_container {
+		@extend .p-3;
+		display: flex;
+		flex-direction: column;
+		color: $gray-700;
+
+		.price {
+			@extend .mt-2;
+			@extend .mb-0;
+			@extend .text-primary;
+
+			span {
+				color: $gray-700;
+				text-decoration: line-through;
+			}
+		}
 	}
 }
