@@ -1,0 +1,11 @@
+input,
+select,
+button {
+
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}

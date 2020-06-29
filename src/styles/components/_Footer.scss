@@ -1,0 +1,20 @@
+.footer {
+	background-color: $footer-bg-color;
+	@extend .p-3;
+	display: flex;
+	justify-content: space-between;
+
+	* {
+		@extend .text-white;
+	}
+
+	button {
+		@extend .btn;
+		padding: 0 10px;
+
+		&:hover {
+			transform: scale(1.4);
+			transition: 0.5s;
+		}
+	}
+}
