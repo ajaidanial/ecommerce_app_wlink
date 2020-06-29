@@ -11,18 +11,18 @@ export default function LimitedOfferBanner({
 }) {
   return (
     <div className="limited_offer_banner">
-      <div className="text_area">
-        <div className="text_area_content">
-          <span class="banner_indicator">{badge}</span>
+      <div className="info_area">
+        <div className="info_area_content">
+          <span class="badge">{badge}</span>
           <h1 className="main_header">{title}</h1>
-          <p className="helper">{helperTitle}</p>
+          <p className="helper_text">{helperTitle}</p>
           <button className="view_button">
             View Offers <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
       </div>
 
-      <img className="img-fluid image_content" src={imageLink} />
+      <img className="image_content" src={imageLink} />
     </div>
   )
 }

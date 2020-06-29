@@ -1,0 +1,41 @@
+.limited_offer_banner {
+	background: $light-blue-banner-color;
+	@extend .p-4;
+	display: flex;
+	justify-content: space-between;
+
+	* {
+		color: $app-text-gray;
+	}
+
+	.info_area {
+		@extend .pr-5;
+		display: flex;
+		align-items: center;
+
+		.badge {
+			@extend .badge,
+			.badge-danger,
+			.mb-3;
+		}
+
+		.view_button {
+			@extend .btn,
+			.btn-primary,
+			.px-3;
+
+			svg {
+				@extend .ml-2;
+
+				* {
+					color: $white !important;
+				}
+			}
+		}
+	}
+
+	.image_content {
+		max-width: 600px;
+		@extend .img-fluid,
+	}
+}
