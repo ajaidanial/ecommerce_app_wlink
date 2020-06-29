@@ -1,3 +1,5 @@
+import { connect } from 'react-redux'
+import { toggleAuthModel } from 'appRedux/actions'
 import React, { Component } from 'react'
 
 import {
@@ -7,8 +9,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default class Header extends Component {
+export class Header extends Component {
   render() {
+    const { toggleAuthModel } = this.props
+
     return (
       <div className="header">
         <div className="container">
@@ -29,7 +33,7 @@ export default class Header extends Component {
           </div>
 
           <div className="auth_holder">
-            <div className="user_account_guest">
+            <div className="user_account_guest" onClick={toggleAuthModel}>
               <FontAwesomeIcon icon={faUser} />
               <p>Sign In</p>
             </div>
@@ -50,3 +54,13 @@ export default class Header extends Component {
     )
   }
 }
+
+const mapStateToProps = ({}) => {
+  return {}
+}
+
+const mapDispatchToProps = {
+  toggleAuthModel: toggleAuthModel
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
