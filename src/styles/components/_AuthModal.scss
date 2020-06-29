@@ -1,1 +1,22 @@
+.auth_model_dialog {
+	.modal-header {
+		color: $app-text-gray;
+		@extend .pb-2
+	}
 
+	.modal-body {
+		@extend .pb-0;
+	}
+
+	.modal-footer {
+		justify-content: flex-start;
+		border: none;
+		@extend .pt-0;
+
+		.action_btn {
+			@extend .btn,
+			.btn-success,
+			.text-white;
+		}
+	}
+}
