@@ -1,0 +1,49 @@
+.trending_icon_list {
+
+	* {
+		color: $app-text-gray;
+	}
+
+	.list_heading {
+		@extend .mb-2;
+	}
+
+	.view_more {
+		@extend .mt-2;
+		font-size: 14px;
+
+		svg {
+			@extend .ml-2;
+		}
+	}
+
+	.single_trending_item {
+		display: flex;
+		@extend .py-2;
+		border-bottom: 1px solid $app-border-color;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		img {
+			max-width: 80px;
+		}
+
+		.text_content_holder {
+			@extend .pl-3;
+			@extend .w-100;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+
+			p {
+				@extend .mb-2;
+			}
+
+			small {
+				@extend .text-primary;
+			}
+		}
+	}
+}

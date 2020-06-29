@@ -5,11 +5,8 @@ import React, { Component } from 'react'
 
 export function SingleTrendingItem({ title, price, image_link }) {
   return (
-    <div className="single_item">
-      <img
-        src={image_link ? image_link : require('assets/dummy_250_250.png')}
-        alt="trending_item_image"
-      />
+    <div className="single_trending_item">
+      <img src={image_link} alt="Trending Item Image" />
       <div className="text_content_holder">
         <p>{title}</p>
         <small>{price}</small>
@@ -24,7 +21,7 @@ export default class TrendingIconList extends Component {
 
     return (
       <div className="trending_icon_list">
-        <p>{list_title}</p>
+        <p className="list_heading">{list_title}</p>
         {trendingItemsData.map((element_data) => (
           <SingleTrendingItem {...element_data} />
         ))}
@@ -44,21 +41,31 @@ TrendingIconList.propTypes = {
 TrendingIconList.defaultProps = {
   list_title: 'BestSeller Items',
   trendingItemsData: [
-    { title: 'Test1', price: '$201.02', image_link: '' },
-    { title: 'Test1', price: '$201.02', image_link: '' },
-    { title: 'Test1', price: '$201.02', image_link: '' },
-    { title: 'Test1', price: '$201.02', image_link: '' }
+    {
+      title: 'Test1',
+      price: '$201.02',
+      image_link: require('assets/dummy_250_250.png')
+    },
+    {
+      title: 'Test1',
+      price: '$201.02',
+      image_link: require('assets/dummy_250_250.png')
+    },
+    {
+      title: 'Test1',
+      price: '$201.02',
+      image_link: require('assets/dummy_250_250.png')
+    },
+    {
+      title: 'Test1',
+      price: '$201.02',
+      image_link: require('assets/dummy_250_250.png')
+    }
   ]
 }
 
 SingleTrendingItem.propTypes = {
-  title: PropTypes.string,
-  price: PropTypes.string,
-  image_link: PropTypes.string
-}
-
-SingleTrendingItem.defaultProps = {
-  title: 'Test Item Name',
-  price: '$201.22',
-  image_link: require('assets/dummy_250_250.png')
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  image_link: PropTypes.string.isRequired
 }
