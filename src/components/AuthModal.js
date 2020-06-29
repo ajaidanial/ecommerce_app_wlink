@@ -1,4 +1,6 @@
 import { connect } from 'react-redux'
+import { faUser, faLock } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FormGroup } from 'components'
 import { Modal } from 'react-bootstrap'
 import { toggleAuthModel } from 'appRedux/actions'
@@ -35,6 +37,13 @@ export class AuthModal extends Component {
     })
   }
 
+  changeAuthModelType = (modelType) => {
+    this.setState({
+      ...this.state,
+      modelType: modelType
+    })
+  }
+
   render() {
     const { showAuthModel, toggleAuthModel } = this.props
     const { modelType, values, errors } = this.state
@@ -47,8 +56,25 @@ export class AuthModal extends Component {
         onHide={toggleAuthModel}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <div className="auth_model_header">
+            <p
+              className={`auth_heading ${modelType === 'sign_in' && 'active'}`}
+              onClick={() => this.changeAuthModelType('sign_in')}
+            >
+              <FontAwesomeIcon className="auth_heading_icon" icon={faLock} />
+              Sign In
+            </p>
+
+            <p
+              className={`auth_heading ${modelType === 'sign_up' && 'active'}`}
+              onClick={() => this.changeAuthModelType('sign_up')}
+            >
+              <FontAwesomeIcon className="auth_heading_icon" icon={faUser} />
+              Sign Up
+            </p>
+          </div>
         </Modal.Header>
+
         <Modal.Body>
           {(() => {
             switch (modelType) {
@@ -134,6 +160,7 @@ export class AuthModal extends Component {
             }
           })()}
         </Modal.Body>
+
         <Modal.Footer>
           {(() => {
             switch (modelType) {
@@ -141,7 +168,14 @@ export class AuthModal extends Component {
                 return (
                   <>
                     <button className="action_btn">Sign In</button>
-                    <button className="action_btn">Generate OTP</button>
+                    <button
+                      onClick={() => {
+                        this.changeAuthModelType('otp')
+                      }}
+                      className="action_btn"
+                    >
+                      Generate OTP
+                    </button>
                   </>
                 )
               case 'sign_up':

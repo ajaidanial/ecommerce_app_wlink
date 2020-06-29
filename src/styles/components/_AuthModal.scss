@@ -1,7 +1,35 @@
 .auth_model_dialog {
 	.modal-header {
 		color: $app-text-gray;
-		@extend .pb-2
+		@extend .pb-2;
+
+		.auth_model_header {
+			display: flex;
+
+			.auth_heading {
+				@extend .mb-0,
+				.mr-4;
+				cursor: pointer;
+
+				.auth_heading_icon {
+					margin-right: 8px;
+				}
+			}
+
+			.auth_heading.active {
+				@extend .text-danger;
+				position: relative;
+
+				&::before {
+					content: '';
+					height: 2px;
+					width: 100%;
+					bottom: -10px;
+					@extend .bg-danger;
+					position: absolute;
+				}
+			}
+		}
 	}
 
 	.modal-body {
