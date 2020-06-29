@@ -157,6 +157,8 @@ export class AuthModal extends Component {
                     />
                   </>
                 )
+              default:
+                return null
             }
           })()}
         </Modal.Body>
@@ -190,6 +192,8 @@ export class AuthModal extends Component {
                     <button className="action_btn">Confirm</button>
                   </>
                 )
+              default:
+                return null
             }
           })()}
         </Modal.Footer>

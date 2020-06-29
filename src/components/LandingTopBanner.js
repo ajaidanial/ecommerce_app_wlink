@@ -32,7 +32,7 @@ export default function LandingTopBanner({ slickData }) {
                   </button>
                 </div>
               </div>
-              <img src={data.imageLink} />
+              <img alt="" src={data.imageLink} />
             </div>
           ))}
         </Slider>

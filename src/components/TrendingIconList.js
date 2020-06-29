@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 export function SingleTrendingItem({ title, price, image_link }) {
   return (
     <div className="single_trending_item">
-      <img src={image_link} alt="Trending Item Image" />
+      <img src={image_link} alt="" />
       <div className="text_content_holder">
         <p>{title}</p>
         <small>{price}</small>

@@ -55,12 +55,8 @@ export class Header extends Component {
   }
 }
 
-const mapStateToProps = ({}) => {
-  return {}
-}
-
 const mapDispatchToProps = {
   toggleAuthModel: toggleAuthModel
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(null, mapDispatchToProps)(Header)

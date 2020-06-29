@@ -22,7 +22,7 @@ export default function LimitedOfferBanner({
         </div>
       </div>
 
-      <img className="image_content" src={imageLink} />
+      <img alt="" className="image_content" src={imageLink} />
     </div>
   )
 }

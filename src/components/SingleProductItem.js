@@ -23,7 +23,7 @@ export default function SingleProductItem({
         <button className="wishlist_btn">
           <FontAwesomeIcon icon={faHeart} />
         </button>
-        <img className="product_image" src={image_link} />
+        <img alt="" className="product_image" src={image_link} />
       </div>
 
       <div className="info_container">
