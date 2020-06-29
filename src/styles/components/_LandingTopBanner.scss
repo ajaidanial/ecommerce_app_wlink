@@ -1,0 +1,55 @@
+.landing_top_bannner {
+	padding: 70px 0px;
+	background-color: $light-blue-banner-color;
+
+	.slick-arrow.slick-next,
+	.slick-arrow.slick-prev {
+		display: none !important;
+	}
+
+	.slick-dots {
+		bottom: -45px;
+
+		.slick-active {
+			button {
+				&::before {
+					@extend .text-danger;
+				}
+			}
+		}
+
+		button {
+			&:hover {
+				&::before {
+					@extend .text-danger;
+				}
+			}
+		}
+
+		li {
+			@extend .mx-0;
+		}
+	}
+
+	.inner_slick_container {
+		display: flex !important;
+		flex-direction: row;
+
+		.info_container {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.inner_info {
+				color: $app-text-gray;
+
+				button {
+					svg {
+						@extend .ml-2;
+					}
+				}
+			}
+		}
+	}
+}

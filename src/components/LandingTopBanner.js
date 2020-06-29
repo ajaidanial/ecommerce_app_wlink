@@ -15,7 +15,7 @@ export default function LandingTopBanner({ slickData }) {
   }
 
   return (
-    <div className="bannner_top_slider">
+    <div className="landing_top_bannner">
       <div className="container">
         <Slider {...slickSettings}>
           {slickData.map((data) => (
