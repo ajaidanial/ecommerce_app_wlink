@@ -1,0 +1,21 @@
+.section_heading {
+	display: flex;
+	justify-content: space-between;
+	@extend .pb-3;
+	border-bottom: 1px solid $app-border-color;
+
+	h3 {
+		@extend .mb-0;
+		color: $app-text-gray;
+	}
+
+	button {
+		@extend .btn,
+		.btn-outline-primary;
+		border-radius: $border-radius;
+
+		svg {
+			@extend .ml-2;
+		}
+	}
+}
