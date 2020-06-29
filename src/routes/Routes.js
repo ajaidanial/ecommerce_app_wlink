@@ -21,7 +21,7 @@ import {
   WISHLIST_PAGE_URL,
   ADDRESSES_PAGE_URL
 } from 'constants/appConfig'
-import { Footer, Header } from 'components'
+import { Footer, Header, AuthModal } from 'components'
 import { Route, Switch } from 'react-router-dom'
 import React from 'react'
 
@@ -54,6 +54,9 @@ const Routes = () => {
         <Route component={Page404} />
       </Switch>
       <Footer />
+
+      {/* Other App Utilities */}
+      <AuthModal />
     </>
   )
 }
